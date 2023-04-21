@@ -1,0 +1,23 @@
+.layout{
+    display: flex;
+    position: relative;
+}
+.layout > .outlet-container{
+    // border: 1px solid lime;
+    box-sizing: border-box;
+    width: 100%;
+    background-color: #F7F7F7;
+    position: relative;
+    overflow: hidden;
+}
+
+@media (max-width: 779px) {
+    .layout{
+        flex-direction: column;
+        width: 100vw;
+        background-color: violet;
+    }
+    .layout > .outlet-container{
+        margin-top: 4rem;
+    }
+}

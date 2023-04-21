@@ -1,0 +1,58 @@
+<div [class]="navbarActive ? 'navbar active' : 'navbar'">
+    <span class="logo-container">
+        <button (click)="toggleNav()">
+            <img id="logo" src={{logoUrl}} alt="logo.png">
+        </button>
+
+        <a href="/dashboard" class="icon-labels logo">
+            <span>
+                <span>ngular</span>
+                <span>Dashboard</span>
+            </span>
+        </a>
+
+        <button (click)="toggleNav()" class="buger">
+            <mat-icon>{{navbarActive ? 'close' : 'menu'}}</mat-icon>
+        </button>
+    </span>
+    <hr>
+    <nav>
+        <ul class="menu">
+            <li>
+                <a routerLink="/dashboard" [routerLinkActive]="'active'">
+                    <mat-icon>dashboard</mat-icon>
+                    <span class="icon-labels">Dashboard</span>
+                </a>
+            </li>
+            <li>
+                <a routerLink="/profile" [routerLinkActive]="'active'">
+                    <mat-icon>account_circle</mat-icon>
+                    <span class="icon-labels">User Profile</span>
+                </a>
+            </li>
+            <li>
+                <a routerLink="/table-list" [routerLinkActive]="'active'">
+                    <mat-icon>table_chart</mat-icon>
+                    <span class="icon-labels">Table List</span>
+                </a>
+            </li>
+            <li>
+                <a routerLink="/calendar" [routerLinkActive]="'active'">
+                    <mat-icon>calendar_today</mat-icon>
+                    <span class="icon-labels">Calendar</span>
+                </a>
+            </li>
+            <li>
+                <a routerLink="/forms" [routerLinkActive]="'active'">
+                    <mat-icon>folder_open</mat-icon>
+                    <span class="icon-labels">Forms</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <a href="/dashboard" class="logout-button">
+        <mat-icon>logout</mat-icon>
+        <span class="icon-labels">Logout</span>
+    </a>
+</div>

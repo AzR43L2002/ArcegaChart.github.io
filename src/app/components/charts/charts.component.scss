@@ -1,0 +1,26 @@
+.charts-container{
+    margin-top: 1rem;
+    /* border: 1px solid red; */
+    width: 100%;
+    height: auto;
+    display: flex;
+    box-sizing: border-box;
+    gap: 1rem;
+    .charts{
+        border-radius: 10px;
+        background-color: #fff;
+        // border: 1px solid blue; 
+        width: 100%;
+        box-shadow: 3px 6px 5px -4px rgba(0,0,0,0.3);
+        -webkit-box-shadow: 3px 6px 5px -4px rgba(0,0,0,0.3);
+        -moz-box-shadow: 3px 6px 5px -4px rgba(0,0,0,0.3);
+        overflow: hidden;
+
+    } 
+}
+@media screen and (max-width: 1000px) {
+    .charts-container{
+        flex-direction: column;
+        height: auto;
+    }
+}

@@ -1,0 +1,10 @@
+<section class="charts-container">
+    <div class="charts" *ngFor="let data of chartData">
+        <canvas 
+        class="chart"
+        baseChart  
+        [data]="data"
+        [type]="data.type == 'line' ? 'line':'bar' "
+        ></canvas>
+    </div>
+</section>

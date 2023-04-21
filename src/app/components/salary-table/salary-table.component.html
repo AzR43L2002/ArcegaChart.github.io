@@ -1,0 +1,44 @@
+<section class="employees-salary-table">
+    <header>
+        <h1>Employee's Salary</h1>
+        <button class="add-employee-btn" mat-raised-button >add employee</button>
+    </header>
+    <table>
+        <tr class="table-header">
+            <th>EMPLOYEE</th>
+            <th>SALARY</th>
+            <th>STATUS</th>
+            <th>MANAGE</th>
+        </tr>
+        <tr *ngFor="let data of employeesData" class="employee-table-row">
+            <td>
+                <div class="employee-row">
+                    <div class="img-container">
+                        <img [src]="data.imgUrl" alt="">
+                    </div>
+                    <div>
+                        <h3 class="name">{{data.name}}</h3>
+                        <span class="job-title">{{data.jobTitle}}</span>
+                    </div>
+                </div>
+            </td>
+            <td>
+                <h3 class="salary">{{data.salary | currency}}</h3>
+                <span>{{data.sched}}</span>
+            </td>
+            <td>
+                <h3 class="status">{{data.status}}</h3>
+                <span>{{data.time_status}}</span>
+            </td>
+            <td>
+                <button mat-icon-button>
+                    <mat-icon>edit_outline</mat-icon>
+                </button>
+                <button mat-icon-button>
+                    <mat-icon>delete_outline</mat-icon>
+                </button>
+            </td>
+
+        </tr>
+    </table>
+</section>
